@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>demo04</title>
+        <script src="../build/react.js"></script>
+	    <script src="../build/react-dom.js"></script>
+	    <script src="../build/browser.min.js"></script>
+    </head>
+    <body>
+    	<div id="example"></div>
+
+    	<script type="text/babel">
+    		{/*定义一个HelloMessage组件*/}
+    		{/*注意：组件的第一个字母必须大写*/}
+    		{/*注意：组件只能包含一个顶层标签*/}
+
+	    	var HelloMessage = React.createClass({
+				render:function(){
+					return <h1>hello {this.props.name}</h1>; {/*class 属性需要写成 className ，for 属性需要写成 htmlFor*/}
+				}
+			});
+
+			ReactDOM.render(
+				<HelloMessage name="王二狗"/>,
+				document.getElementById("example")
+			)
+	    </script>
+    </body>
+</html>
